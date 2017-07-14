@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{% block title %}Welcome!{% endblock %}</title>
+<link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+{% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+<div id="wrapper">
+<div id="header">
+	<div id="logo"><img src="{{ asset('images/logo.gif') }}" width="257" height="101" alt="" /></div>
+    <div id="macafee">
+    	<div><img src="{{ asset('images/icon_1.gif') }}" width="96" height="46" alt="" /></div>
+        <div class="tested">TESTED</div>
+        <div class="date">07-MAY</div>
+    </div>
+<div id="comodo">
+    	<div><img src="{{ asset('images/icon_2.gif') }}" width="114" height="46" alt="" /></div>
+      <div class="tested">TESTED</div>
+        <div class="date1">22 MAY</div>
+    </div>
+  </div>
+  <div id="black_bg"></div>
+    <div id="grey_box">
+    <div id="middlecontanier">
+  <div id="promise">
+        	<div id="promise_left"><img src="{{ asset('images/bg_left.gif') }}" width="10" height="104" alt="" /></div>
+            <div id="promise_middle">
+            	<div id="img"><img src="{{ asset('images/img_00.gif') }}" width="71" height="71" alt="" /></div>
+                <div id="promisetxt"><h1>The Jean-Patrique&#8482; Promise</h1>
+                  <p>You may inspect any of our products in your own home for 30 days. If you are not 
+                    100% delighted with your new purchase – for whatever reason – simply return it 
+                  unused for a full refund of the cost of the goods.</p>
+                </div>
+        </div>
+            <div id="promise_right"><img src="{{ asset('images/bg_right.gif') }}" width="10" height="104" alt="" /></div>
+        </div>
+        <!-- Header Ends -->
+        
+		{% block body %}{% endblock %}
+      
+    
+    <!-- Footer Section -->
+    <div id="footer"> 
+    <div id="links" align="center">
+   <a href="#" class="links"> About  Jean-Patrique</a>  |  <a href="#" class="links">Inquiries about Delivery?</a>  |   <a href="#" class="links">Inquiries about Payment?</a>   |   <a href="#" class="links">Customer Services</a>  |  <a href="#" class="links">Terms &amp; Conditions</a>  |  <a href="#" class="links">Privacy Polocy</a></div>
+    <div id="greenbg">
+    <div><h3>Now Serving over 500,000 Happy Customers in the UK!</h3></div>
+    <div><h4>Jean-Patrique is one of the UK's favourite cookware suppliers, and with over 500,000 satisfied customers in the UK alone, we offer you the opportunity to buy professional cookware, at discount prices, direct from the manufacturer. From professional 18/10 stainless steel cookware sets to professional knife sets, there is something for everyone.</h4>
+    </div>
+    </div>
+    <div align="center"><img src="{{ asset('images/payment.gif') }}" width="387" height="57" alt="" /></div>
+</div>
+</div>
+<!-- Footer Ends -->
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

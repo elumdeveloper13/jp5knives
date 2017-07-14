@@ -1,0 +1,274 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+     <!-- Center Content -->
+	
+	 {{ form_start(form, {'method': 'POST', 'attr': {'novalidate': 'novalidate'}} ) }}
+      <div id="box_black">
+          <div id="red_bg"><h6>Due to the overwhelming demand for this promotional item, we can only hold your order for 5:00</h6></div>
+          <div class="heading">
+          	<div class="heading_01"><h2>Item</h2></div>
+            <div class="heading_02"><h2>Price</h2></div>
+            <div class="heading_02"><h2>Qty</h2></div>
+            <div class="heading_02"><h2>Total</h2></div>
+          </div>
+<div class="form">
+           	<div class="imgbox"><img src="images/img_01.gif" width="123" height="83" alt="" /></div>
+<div class="contentbox">
+            	<div class="box2"><p>5-Piece Professional</p>
+            	  <p> Chef’s Knife Set</p>
+            	</div>
+                <div class="tablebox">&pound;125.75</div>
+                <div class="tablebox1">
+                  <div class="table">1</div>
+                  <div><span style="color:#060; text-decoration:underline; font-size:12px;">Update</span></div>
+                </div>
+                <div class="tablebox">&pound;125.75</div>
+</div>
+            <div class="contentbox0">
+            <div class="contentbox1"><h5>£110.76</h5></div>
+            <div class="contentbox2">
+              Discount :</div>
+             
+          </div>
+            <div class="contentbox0">
+             <div class="contentbox1"><h5>£14.99</h5></div>
+            <div class="contentbox2">
+              Postage, Packaging & Insurance :</div>
+          </div>
+             <div class="contentbox0">
+              <div class="contentbox1"><h5><span style="color:#000;">£0.00</span></h5></div>
+            <div class="contentbox2">
+              Total ( VAT Included ) :</div>
+          </div>
+          </div>
+          <div class="heading">
+          	<div class="heading_01"><h2>Enter Shipping Address</h2></div>
+          </div>
+          <div class="form">
+          
+          <div class="box1">
+            <div class="box2">
+              <label><span class="errtxt">{{ form_errors(form.shippedto.sFname) }} </span>
+			     {{ form_widget(form.shippedto.sFname, { 'attr':{'placeholder':'Forename'}} ) }}
+			    
+               <!-- <input name="textarea" type="text" class="txtbox" id="textarea" value="" size="20" />-->
+              </label>
+            </div>
+             <div class="box2">
+               <label><span class="boxtxt">Surname*</span>
+                 <br />
+				 {{ form_widget(form.shippedto.sLname, { 'attr':{'placeholder':'Surname'}}) }}
+                <!-- <input name="textarea2" type="text" class="txtbox" id="textarea2" value="" size="20" />-->
+               </label>
+             </div>
+            </div>
+             <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Address1*</span><br />
+			   {{ form_widget(form.shippedto.sAddress1, { 'attr':{'placeholder':'Address1'}}) }}
+               <!--<input name="textarea" type="text" class="txtbox" id="textarea3" value="" size="20" />-->
+              </label>
+             </div>
+          </div>
+             <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Address2</span><br />
+               {{ form_widget(form.shippedto.sAddress2, { 'attr':{'placeholder':'Address2'}}) }}
+			   <!--<input name="textarea" type="text" class="txtbox" id="textarea4" value="" size="20" />-->
+              </label>
+             </div>
+    </div>
+             <div class="box1">
+             <div class="box2">
+             <label><span class="boxtxt">Town*</span><br />
+			   {{ form_widget(form.shippedto.sCity, { 'attr':{'placeholder':'Town'}}) }}
+               <!--<input name="textarea" type="text" class="txtbox" id="textarea5" value="" size="20" />-->
+              </label>
+             </div>
+             <div class="box2">
+             <label><span class="boxtxt">County*<br />
+             </span>
+              {{ form_widget(form.shippedto.sState, { 'attr':{'placeholder':'County'}}) }}
+			   <!--<input name="textarea" type="text" class="txtbox" id="textarea6" value="" size="20" />-->
+              </label>
+             </div>
+             <div class="box2">
+             <label><span class="boxtxt">Postalcode*</span>
+              {{ form_widget(form.shippedto.sPostalcode, { 'attr':{'placeholder':'Postalcode'}}) }}
+			   <!--<input name="textarea" type="text" class="txtbox" id="textarea7" value="" size="20" />-->
+              </label>
+             <span class="boxtxt"><strong>UK</strong></span></div>
+            </div>
+            <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Email id*</span><br />
+                {{ form_widget(form.emailAddress, { 'attr':{'placeholder':'Email Id'}}) }}
+				<!--<input name="textarea" type="text" class="txtbox" id="textarea5" value="" size="20" />-->
+              </label>
+             </div>
+            </div>
+             <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Contact No</span><br />
+              <!-- <span class="boxtxt">( </span>-->
+              {{ form_widget(form.contactNo, { 'attr':{'placeholder':'Contact No'}}) }}
+			   <!--<input name="textarea" type="text" class="txtbox1" id="textarea5" value="" size="20" />
+               <span class="boxtxt">) </span></label>
+             <input name="textarea3" type="text" class="txtbox" id="textarea8" value="" size="20" />-->
+             </div>
+            </div>
+            <div class="box1">
+              <!--<label></label>-->
+			      {{ form_widget(form.isShipping) }}
+                <!--<input type="checkbox" name="checkbox" id="checkbox" />-->
+                <span class="boxtxt">My Billing Address is the same as my Shipping Address</span>
+            </div>
+          
+          </div>
+          <div class="heading">
+          	<div class="heading_01">
+       	    <h2>Billing Information</h2></div>
+          </div>
+          <div class="form">
+          
+          <div class="box1">
+            <div class="box2">
+              <label><span class="boxtxt">Forename* {{ form_errors(form.firstName) }}</span>
+			  {{ form_widget(form.firstName, { 'attr':{'placeholder':'Forename'}}) }}
+                <!--<input name="textarea" type="text" class="txtbox" id="textarea" value="" size="20" />-->
+              </label>
+            </div>
+             <div class="box2">
+               <label><span class="boxtxt">Surname* {{ form_errors(form.lastName) }}</span>
+                 <br />
+				 {{ form_widget(form.lastName, { 'attr':{'placeholder':'Surname'}}) }}
+                 <!--<input name="textarea2" type="text" class="txtbox" id="textarea2" value="" size="20" />-->
+               </label>
+             </div>
+            </div>
+             <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Address1*</span><br />
+			 {{ form_widget(form.address1, { 'attr':{'placeholder':'Address1'}}) }}
+              <!-- <input name="textarea" type="text" class="txtbox" id="textarea3" value="" size="20" />-->
+              </label>
+             </div>
+          </div>
+             <div class="box1">
+             <div class="box3">
+             <label><span class="boxtxt">Address2</span><br />
+			 {{ form_widget(form.address2, { 'attr':{'placeholder':'Address2'}}) }}
+               <!--<input name="textarea" type="text" class="txtbox" id="textarea4" value="" size="20" />-->
+              </label>
+             </div>
+      </div>
+            <div class="box1">
+             <div class="box2">
+             <label><span class="boxtxt">Town*</span><br />
+               {{ form_widget(form.city, { 'attr':{'placeholder':'Town'}}) }}
+			  <!-- <input name="textarea" type="text" class="txtbox" id="textarea5" value="" size="20" />-->
+              </label>
+             </div>
+             <div class="box2">
+             <label><span class="boxtxt">County*<br />
+             </span>
+			  {{ form_widget(form.state, { 'attr':{'placeholder':'County'}}) }}
+              <!-- <input name="textarea" type="text" class="txtbox" id="textarea6" value="" size="20" />-->
+              </label>
+             </div>
+             <div class="box2">
+             <label><span class="boxtxt">Postalcode*</span>
+			 {{ form_widget(form.zip, { 'attr':{'placeholder':'Postal Code'}}) }}
+               <!--<input name="textarea" type="text" class="txtbox" id="textarea7" value="" size="20" />-->
+              </label>
+             <span class="boxtxt"><strong>UK</strong></span></div>
+            </div>
+            <div class="box1">
+              <label>
+                <input type="checkbox" name="checkbox2" id="checkbox2" />
+              <span class="boxtxt">By ticketing this box you are electronically siging your order and authorizing us to charge against the credit card provided above</span></label>
+            </div>
+          
+          </div>
+        <div class="heading">
+          	<div class="heading_01"><h2>Select Payment Method</h2></div>
+          </div>
+        <div class="form">
+         
+          <div class="box4">
+                 <label>
+                  
+                   <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0" /></label>
+                 <label><span class="boxtxt">Credit card via Sagepay's secure-shop with confidence!</span></label>
+              </p>
+               <img src="images/payment.gif" width="387" height="57" alt="" /><br />
+                 <label>
+                   <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1" />
+                 </label>
+                 <label><span class="boxtxt">Paypal - pay without sharing your financial information</span></label>
+<br />
+              <img src="images/payment_01.gif" width="253" height="37" alt="" />
+            </div>
+              <div class="box4">
+                <p><strong>Credit Card Informations</strong></p>
+<p>&nbsp;</p>
+                <p class="boxtxt">This sage pay secure order form is protected by the latest in encryption technology.</p>
+                <p class="boxtxt">&nbsp;</p>
+            </div>
+              <div class="box1">
+                <div class="box2">
+                  <span class="boxtxt">credit card type* </span><br />
+                  {{ form_widget(form.ccType) }}
+				 <!-- <select name="select" class="txtbox" id="select">
+                    <option><span class="boxtxt">Credit card</span></option>
+                    <option><span class="boxtxt">Paypal</span></option>
+                  </select>-->
+				  
+                </div>
+              </div>
+              <div class="box1">
+                <div class="box2">
+                  <label><span class="boxtxt">Card holder Name*</span><br />
+                    {{ form_widget(form.ccHolderName, { 'attr':{'placeholder':'Card holder Name'}}) }}
+					<!--<input name="textarea5" type="text" class="txtbox" id="textarea9" value="" size="20" />-->
+                  </label>
+                </div>
+                <div class="box2">
+                  <label><span class="boxtxt">Expiration Date*</span><br />
+                    
+					{{ form_widget(form.ccExpMM) }}
+                  
+                  {{ form_widget(form.ccExpYY) }}
+				  </label>
+                </div>
+              </div>
+              
+            <div class="box1">
+                <div class="box2">
+                  <label><span class="boxtxt">Card number*</span><br />
+                    {{ form_widget(form.ccNo, { 'attr':{'placeholder':'Card Number'}}) }}
+					<!--<input name="textarea4" type="text" class="txtbox" id="textarea13" value="" size="20" />-->
+                  </label>
+                </div>
+              <div class="box2">
+                  <label><span class="boxtxt">Card Security Id* (what's this?)<br />
+                    </span>
+					{{ form_widget(form.ccCvv2, { 'attr':{'placeholder':'CVV2'}}) }}
+                    <!--<input name="textarea4" type="text" class="txtbox" id="textarea14" value="" size="20" />-->
+                  </label>
+              </div>
+            </div>
+          
+        </div>
+
+<div class="btn"> {{ form_widget(form.save) }}
+<!--<a href="#"><img src="images/btn.gif" width="192" height="33" alt="" /></a>-->
+          	</div>
+        </div>
+        {{ form_end(form) }}  	
+        </div>
+    </div>
+    </div>
+    <!-- Center Content -->
+{% endblock %}
